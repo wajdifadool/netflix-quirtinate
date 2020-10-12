@@ -1,0 +1,472 @@
+:root {
+  --primary-color: #e50914;
+  --primary-color-hover: #f2111c;
+  --background-color: #000;
+  --download-color: #0071eb;
+  --list-items-color: #303030;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #999;
+}
+
+.showcase {
+  width: 100%;
+  height: 130vh;
+  position: relative;
+  background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+  overflow: hidden;
+}
+
+/* Add shaddow */
+.showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.showcase-top {
+  position: relative;
+  height: 90px;
+  z-index: 2;
+}
+
+.showcase-top img {
+  position: absolute;
+  width: 160px;
+  top: 50%;
+  left: 10%;
+  margin-left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-top a {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 0;
+  padding: 0.5rem 1.3rem;
+  font-weight: 200;
+}
+
+.btn:hover {
+  background: var(--primary-color-hover);
+}
+
+.showcase-content {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 8rem;
+  width: 70%;
+}
+
+.showcase-content h1 {
+  font-weight: 400;
+  font-size: 3.4rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.showcase-content h4 {
+  margin-top: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Form  */
+.showcase-form {
+  width: 95%;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.showcase-form P {
+  padding: 0 20px;
+  margin-top: 1.2rem;
+  margin-bottom: 1.1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  width: 100;
+  height: 100%;
+}
+
+.placeholer {
+  flex: 2;
+  order: 1;
+  padding-left: 10px;
+}
+
+.submit {
+  flex: 1;
+  order: 2;
+  font-size: 1.9rem;
+  padding: 0.7rem 1.9rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+/* Section  */
+.tab-content {
+  border-top: 7px solid #3d3d3d;
+  max-width: 2210px;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+.container {
+  overflow: hidden;
+  margin: 3rem auto;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+/* Tv Section */
+.tv-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tv-content {
+  flex: 1;
+  order: 2;
+}
+
+.tv-content h1 {
+  margin-bottom: 2rem;
+}
+
+.tv-content p {
+  line-height: 1.5;
+}
+
+.tv-animation {
+  width: 900px;
+  position: relative;
+  align-items: center;
+  flex: 1;
+  order: 2;
+}
+
+.video-wraper {
+  position: relative;
+  overflow: hidden;
+}
+
+.tv-animation .video-wraper img {
+  position: relative;
+  max-width: 100%;
+  border: 0;
+  height: auto;
+  z-index: 2;
+}
+
+.tv-animation .video-wraper .video-container {
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  position: absolute;
+  top: 47.7%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+}
+
+/* For  the bootom section vidos frame */
+.tv-animation .video-wraper .video-container-2 {
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 45%;
+  position: absolute;
+  top: 37.7%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.tv-animation .video-wraper .videos-playback {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+}
+
+/* Mobile Section */
+.mobile-section {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-content {
+  flex: 1;
+  order: 2;
+}
+
+.our-story-card-image-container {
+  flex: 1;
+  order: 1;
+  width: 48%;
+  height: 100%;
+  display: flex;
+  flex: 0 1 auto;
+  /* -moz-box-flex: 0; */
+}
+
+.our-story-card-animation-container {
+  position: relative;
+  overflow: hidden;
+  margin: -8% 0 -4% -15%;
+  min-height: 100px;
+  width: 100%;
+  border: 0;
+}
+
+/* in  Responsive  it will prevent image from moving it will keep it in its border
+max-width:100% */
+.our-story-card-animation-container img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/* Bootoom parent */
+.our-story-card-animation {
+  display: flex;
+  border: 2px solid #3d3d3d;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  display: flex;
+  width: 65%;
+  height: 25%;
+  align-items: center;
+  min-width: 20em;
+  border-radius: .75em;
+  background: var(--background-color);
+  padding: .5em .75em;
+  box-shadow: 0 0 3em 20px var(--dark-color);
+  min-height: 5rem;
+}
+
+/* Add GIF  */
+.our-story-card-animation::after {
+  content: '';
+  width: 3em;
+  height: 3em;
+  outline: 2px solid #000;
+  outline-offset: -2px;
+  display: block;
+  background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
+  background-size: auto;
+  margin: auto;
+  background-size: 100%;
+  -moz-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.our-story-card-animation .our-story-card-animation-image {
+  margin: 0 1em 0 0;
+  -moz-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.our-story-card-animation .our-story-card-animation-image img {
+  height: 4.5em;
+  max-width: 100%;
+  border: 0;
+}
+
+.our-story-card-animation .our-story-card-animation-text {
+  margin: 0.3em 0;
+}
+
+.our-story-card-animation-container-image {
+  box-shadow: 0 0 3em 0 #000;
+}
+
+.text-0 {
+  font-weight: 900;
+  color: white;
+  white-space: nowrap;
+}
+
+.text-1 {
+  padding-top: 1px;
+  font-size: .9em;
+  font-weight: 400;
+  color: var(--download-color);
+  white-space: nowrap;
+}
+
+/* Frequently ASKED questionS */
+.faq-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  width: 80%;
+  text-align: center;
+}
+
+.faq-container h1 {
+  margin-bottom: 2rem;
+}
+
+.list-faq .faq-question {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  border: 0;
+  cursor: pointer;
+  background: var(--list-items-color);
+  color: #fff;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #000;
+  padding: 1.4rem;
+}
+
+svg {
+  position: absolute;
+  width: 2rem;
+  top: 50%;
+  right: 1em;
+  fill: #fff;
+  transform: translateY(-50%);
+    transition: all 1s;
+    display: inline-block;
+}
+
+.rotated {
+  transform: rotate(-90deg);
+}
+
+.faq-answer {
+  padding: 0 2rem;
+  font-size: 1.4rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background: var(--list-items-color);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.faq-answer p {
+  padding-bottom: 2rem;
+}
+.started p
+{
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.footer{
+  width: 80%;
+  margin: auto;
+  margin-top: 4rem;
+}
+.footer .footer-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: left;
+  line-height: 2.4;
+  font-size: .8rem;
+}
+
+/* Utility classes */
+.text-small {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  color: #fff;
+
+}
+
+.text-lg {
+  font-size: 3.5rem;
+  color: #fff;
+  line-height: 1.1;
+  font-weight: 400;
+  direction: ltr;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.text-m {
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 1.4;
+  font-weight: 400;
+  direction: ltr;
+}
+
+.btn {
+  color: #fff;
+  background: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+
+}
+li{
+  /*  */
+  margin: 4px 0 ;
+}
+
+a{
+  text-decoration: none;
+  color: rgba(150, 150,150);
+}
+.w-60{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+.mb{
+  margin-bottom: 2rem;
+}
+@media (max-width: 900px) {
+}
